@@ -40,23 +40,23 @@ typedef enum opcodes {
 	CMP_OP = 1,
 
 	ADD_OP = 2,
-	SUB_OP = 2,
+	SUB_OP = 3,
 
-	LEA_OP = 4,
+	LEA_OP = 6,
 	/* END First Group */
 
 	/* Second Group */
 	CLR_OP = 5,
-	NOT_OP = 5,
-	INC_OP = 5,
-	DEC_OP = 5,
+	NOT_OP = 4,
+	INC_OP = 7,
+	DEC_OP = 8,
 
 	JMP_OP = 9,
-	BNE_OP = 9,
-	JSR_OP = 9,
+	BNE_OP = 10,
+	JSR_OP = 13,
 
-	RED_OP = 12,
-	PRN_OP = 13,
+	RED_OP = 11,
+	PRN_OP = 12,
 	/* END Second Group */
 
 	/* Third Group */
@@ -68,26 +68,6 @@ typedef enum opcodes {
 	NONE_OP = -1
 } opcode;
 
-/** Commands funct */
-typedef enum funct {
-	/* OPCODE 2 */
-	ADD_FUNCT = 1,
-	SUB_FUNCT = 2,
-
-	/* OPCODE 5 */
-	CLR_FUNCT = 1,
-	NOT_FUNCT = 2,
-	INC_FUNCT = 3,
-	DEC_FUNCT = 4,
-
-	/* OPCODE 9 */
-	JMP_FUNCT = 1,
-	BNE_FUNCT = 2,
-	JSR_FUNCT = 3,
-
-	/** Default (No need/Error) */
-	NONE_FUNCT = 0
-} funct;
 
 /** Registers - r0->r1 + not found */
 typedef enum registers {
