@@ -93,23 +93,23 @@ struct cmd_lookup_element {
  * A lookup table for opcode & funct by command name
  */
 static struct cmd_lookup_element lookup_table[] = {
-		{"mov", MOV_OP, NONE_FUNCT},
-		{"cmp",CMP_OP, NONE_FUNCT},
-		{"add",ADD_OP, ADD_FUNCT},
-		{"sub",SUB_OP, SUB_FUNCT},
-		{"lea",LEA_OP, NONE_FUNCT},
-		{"clr",CLR_OP, CLR_FUNCT},
-		{"not",NOT_OP, NOT_FUNCT},
-		{"inc",INC_OP, INC_FUNCT},
-		{"dec",DEC_OP, DEC_FUNCT},
-		{"jmp",JMP_OP, JMP_FUNCT},
-		{"bne",BNE_OP, BNE_FUNCT},
-		{"jsr",JSR_OP, JSR_FUNCT},
-		{"red",RED_OP, NONE_FUNCT},
-		{"prn",PRN_OP, NONE_FUNCT},
-		{"rts",RTS_OP, NONE_FUNCT},
-		{"stop",STOP_OP, NONE_FUNCT},
-		{NULL, NONE_OP, NONE_FUNCT}
+		{"mov", MOV_OP},
+		{"cmp",CMP_OP},
+		{"add",ADD_OP},
+		{"sub",SUB_OP},
+		{"lea",LEA_OP},
+		{"clr",CLR_OP},
+		{"not",NOT_OP},
+		{"inc",INC_OP},
+		{"dec",DEC_OP},
+		{"jmp",JMP_OP},
+		{"bne",BNE_OP},
+		{"jsr",JSR_OP},
+		{"red",RED_OP},
+		{"prn",PRN_OP},
+		{"rts",RTS_OP},
+		{"stop",STOP_OP},
+		{NULL, NONE_OP}
 };
 void get_opcode_func(char *cmd, opcode *opcode_out, funct *funct_out) {
 	struct cmd_lookup_element *e;
